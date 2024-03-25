@@ -135,7 +135,7 @@ export const ColGrid: FC = () => {
 
   return (
     <div
-      className="ag-theme-quartz-dark m-auto mt-10"
+      className="ag-theme-quartz-dark mx-auto mt-10"
       style={{ height: 400, width: 1000 }}
     >
       <h2 className="text-black text-2xl mt-4 font-semibold">Collums tests</h2>

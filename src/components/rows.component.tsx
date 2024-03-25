@@ -42,29 +42,30 @@ export const RowsGrid: FC = () => {
 
   const columnDefs = useMemo<ColDef[]>(
     () => [
-      { field: "time" },
+      { field: "time", flex: 1 },
       {
         field: "session",
+        flex: 2,
         cellRendererFramework: SessionCellRenderer,
         rowSpan: rowSpan,
         cellStyle: cellStyle,
       },
-      { field: "speaker" },
+      { field: "speaker", flex: 2 },
     ],
     []
   );
 
   return (
     <div
-      className="ag-theme-quartz-dark m-auto"
-      style={{ height: 400, width: 1000 }}
+      className="ag-theme-quartz-dark mx-auto pt-12"
+      style={{ height: 400, width: 400 }}
     >
-      <h2 className="text-black text-2xl mt-12 font-semibold">Rows tests</h2>
+      <h2 className="text-black text-2xl mt-4 font-semibold">Rows tests</h2>
       <AgGridReact
         rowData={rowData}
         columnDefs={columnDefs}
-        domLayout="autoHeight"
-        getRowHeight={() => 60}
+        // domLayout="autoHeight"
+        // getRowHeight={() => 60}
         suppressRowTransform={true}
       />
     </div>
